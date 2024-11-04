@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Querra Launcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">Q</div>
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Initializing Launcher...</div>
+    </div>
+  </div>
+
+  <div id="main-content" class="main-content hidden">
+    <div class="titlebar">
+      <div class="titlebar-text">Querra Launcher</div>
+      <div class="titlebar-controls">
+        <button id="minimize">─</button>
+        <button id="maximize">□</button>
+        <button id="close">×</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="sidebar">
+        <div class="user-info">
+          <div class="user-avatar"></div>
+          <div class="user-details">
+            <div class="user-label">Logged in as</div>
+            <div class="user-name" id="username-display">Player</div>
+          </div>
+          <button class="switch-account" id="switch-account">
+            <span class="icon">↓</span>
+          </button>
+        </div>
+
+        <div class="accounts-dropdown" id="accounts-dropdown">
+          <div class="accounts-list" id="accounts-list"></div>
+          <div class="add-account">
+            <button id="add-account-btn">+ Add Account</button>
+          </div>
+        </div>
+
+        <div class="installed-versions">
+          <h3>Installed Versions</h3>
+          <div class="versions-list-wrapper">
+            <div id="installed-versions-list" class="versions-list"></div>
+          </div>
+        </div>
+
+        <div class="dev-log">
+          <h3>Development Log</h3>
+          <div id="dev-log-content" class="log-content"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="featured-image"></div>
+        <div class="featured-content">
+          <div class="featured-text">
+            <h1 class="featured-title">Minecraft Java Edition</h1>
+            <p class="featured-description">Experience the latest version with enhanced graphics and new features.</p>
+          </div>
+          <button id="launch-button" class="launch-button">Play</button>
+        </div>
+
+        <div class="settings-panel">
+          <div class="settings-group">
+            <label>Game Version</label>
+            <div class="custom-select">
+              <select id="version-select"></select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+          <div class="settings-group">
+            <label>Username</label>
+            <input type="text" id="username-input" placeholder="Enter your username">
+          </div>
+          <div class="settings-group">
+            <label>Memory</label>
+            <div class="custom-select">
+              <select id="ram-select">
+                <option value="2">2GB RAM</option>
+                <option value="4">4GB RAM</option>
+                <option value="6">6GB RAM</option>
+                <option value="8">8GB RAM</option>
+              </select>
+              <span class="select-arrow">▼</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-overlay">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <div class="status-text">Ready to play</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
